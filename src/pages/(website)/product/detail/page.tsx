@@ -1,24 +1,20 @@
 import ProductQuery from "@/common/hooks/ProductQuery";
 import { Link, useParams } from "react-router-dom";
 import RelatedProduct from "../_component/RelatedProduct";
-import React, { useRef, useState } from "react";
 // Import Swiper React components
-import { Swiper, SwiperSlide } from "swiper/react";
 
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
 
 // import required modules
-import { Navigation, Pagination, Zoom } from "swiper/modules";
-import TestDetail from "./test";
 // Import Swiper React components
 
 // Import Swiper styles
 import "swiper/css";
-import "swiper/css/zoom";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
+import "swiper/css/zoom";
 const ProductDetail = () => {
     const { id } = useParams();
     const { data, isLoading } = ProductQuery(id);

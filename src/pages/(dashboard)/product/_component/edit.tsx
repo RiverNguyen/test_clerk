@@ -20,7 +20,6 @@ import {
     SelectValue,
 } from "@/components/ui/select";
 import { Textarea } from "@/components/ui/textarea";
-import { toast } from "@/components/ui/use-toast";
 import { useQuery } from "@tanstack/react-query";
 import axios from "axios";
 import { useEffect, useState } from "react";
@@ -103,7 +102,7 @@ const ProductEditPage = () => {
     return (
         <div className=" flex min-h-screen w-[90%] xl:w-full flex-col items-center">
             <div className="flex flex-col sm:gap-4 sm:py-4 sm:pl-14">
-                <div className="grid flex-1 items-start gap-4 p-4 sm:px-6 sm:py-0 md:gap-8 items-center">
+                <div className="grid flex-1  gap-4 p-4 sm:px-6 sm:py-0 md:gap-8 items-center">
                     <Form {...form}>
                         <form
                             onSubmit={form.handleSubmit((data: any) =>
@@ -195,7 +194,7 @@ const ProductEditPage = () => {
                                 <FormField
                                     control={form.control}
                                     name="image"
-                                    render={({ field }) => (
+                                    render={() => (
                                         <FormItem>
                                             <FormLabel htmlFor="image">
                                                 Ảnh sản phẩm:
@@ -252,7 +251,7 @@ const ProductEditPage = () => {
                                 <FormField
                                     control={form.control}
                                     name="gallery"
-                                    render={({ field }) => (
+                                    render={() => (
                                         <FormItem>
                                             <FormLabel htmlFor="gallery">
                                                 Gallery:

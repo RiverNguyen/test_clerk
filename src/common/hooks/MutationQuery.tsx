@@ -1,13 +1,12 @@
-import { useMutation, useQueryClient } from "@tanstack/react-query";
-import { SubmitHandler, useForm } from "react-hook-form";
-import { useNavigate } from "react-router-dom";
-import { IProduct } from "../types/product.ts";
+import { useToast } from "@/components/ui/use-toast";
 import {
     addProduct,
     deleteProduct,
     updateProduct,
 } from "@/services/product.ts";
-import { useToast } from "@/components/ui/use-toast";
+import { useMutation, useQueryClient } from "@tanstack/react-query";
+import { SubmitHandler, useForm } from "react-hook-form";
+import { IProduct } from "../types/product.ts";
 
 type MutationQueryProps = {
     action: "UPDATE" | "DELETE" | "CREATE";
@@ -15,7 +14,6 @@ type MutationQueryProps = {
 
 const MutationQuery = ({ action }: MutationQueryProps) => {
     const { toast } = useToast();
-    const navigate = useNavigate();
     const form = useForm();
     const queryClient = useQueryClient();
 
