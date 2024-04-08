@@ -1,7 +1,6 @@
 import { IProduct } from "@/common/types/product";
 import { useQuery } from "@tanstack/react-query";
 import axios from "axios";
-import { Filter } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const RelatedProduct = ({ id }: { id: string | number }) => {

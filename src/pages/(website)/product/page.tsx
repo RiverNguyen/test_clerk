@@ -1,6 +1,5 @@
 import Banner from "../home/_component/Banner";
 import Services from "../home/_component/Services";
-import Categories from "./_component/CategoryList";
 import Filter from "./_component/Filter";
 import PageNumber from "./_component/PageNumber";
 import ProductList from "./_component/ProductList";

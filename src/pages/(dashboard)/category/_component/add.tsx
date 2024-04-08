@@ -1,7 +1,4 @@
-import MutationQuery from "@/common/hooks/MutationQuery";
-import { IProduct } from "@/common/types/product";
 import { Button } from "@/components/ui/button";
-import { Checkbox } from "@/components/ui/checkbox";
 import {
     Form,
     FormControl,
@@ -11,22 +8,12 @@ import {
     FormMessage,
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
-import {
-    Select,
-    SelectContent,
-    SelectItem,
-    SelectTrigger,
-    SelectValue,
-} from "@/components/ui/select";
-import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
+import { toast } from "@/components/ui/use-toast";
+import { joiResolver } from "@hookform/resolvers/joi";
+import { useMutation, useQueryClient } from "@tanstack/react-query";
 import axios from "axios";
 import Joi from "joi";
 import { useForm } from "react-hook-form";
-import { Textarea } from "@/components/ui/textarea";
-import { useState } from "react";
-import { toast } from "@/components/ui/use-toast";
-import { uploadFileCloudinary } from "@/common/lib/utils";
-import { joiResolver } from "@hookform/resolvers/joi";
 
 const categorySchema = Joi.object({
     name: Joi.string().required().messages({

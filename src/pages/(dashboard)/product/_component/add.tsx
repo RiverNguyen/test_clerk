@@ -191,7 +191,7 @@ const ProductAdd = () => {
                                 <FormField
                                     control={form.control}
                                     name="image"
-                                    render={({ field }) => (
+                                    render={() => (
                                         <FormItem>
                                             <FormLabel htmlFor="image">
                                                 Ảnh sản phẩm:
@@ -239,7 +239,7 @@ const ProductAdd = () => {
                                 <FormField
                                     control={form.control}
                                     name="gallery"
-                                    render={({ field }) => (
+                                    render={() => (
                                         <FormItem>
                                             <FormLabel htmlFor="gallery">
                                                 Gallery:
