@@ -56,7 +56,7 @@ const ProductList = ({ featured, data }: ProductListProps) => {
         <>
             <div className="section-body">
                 <div className="product-list">
-                    {filterProduct?.map((product: IProduct, index: number) => (
+                    {filterProduct?.map((product: any, index: number) => (
                         <div key={index} className="product-item">
                             <div className="product-image">
                                 <img

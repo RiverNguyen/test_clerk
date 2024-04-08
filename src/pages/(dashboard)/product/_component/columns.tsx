@@ -1,7 +1,6 @@
 import { ColumnDef } from "@tanstack/react-table";
 import { ArrowUpDown, MoreHorizontal } from "lucide-react";
 
-import { IProduct } from "@/common/types/product";
 import { Button } from "@/components/ui/button";
 import { Checkbox } from "@/components/ui/checkbox";
 import {
@@ -15,7 +14,7 @@ import {
 import { Link } from "react-router-dom";
 import { useDeleteProduct } from "./deleteProduct";
 
-export const columns: ColumnDef<IProduct>[] = [
+export const columns: ColumnDef<any>[] = [
     {
         id: "select",
         header: ({ table }) => (
